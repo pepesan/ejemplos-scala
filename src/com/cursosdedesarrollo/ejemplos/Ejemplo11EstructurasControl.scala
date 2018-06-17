@@ -16,13 +16,13 @@ object Ejemplo11EstructurasControl {
     }
 
 
-    if (x eq 10){
+    if (x == 10){
       println("X es 10")
     }
-    else if (x eq 20){
+    else if (x == 20){
       println("X es 20")
     }
-    else if (x eq 30){
+    else if (x == 30){
       println("X es 30")
     }
     else{
@@ -38,16 +38,16 @@ object Ejemplo11EstructurasControl {
     }
 
 
-    a = 10;
+    a = 10
 
     // do loop execution
     do {
       println( "a: " + a )
-      a = a + 1;
+      a = a + 1
     }
     while( a < 20 )
 
-    a = 0;
+    a = 0
 
     // for loop execution with a range
     for( a <- 1 to 10){
