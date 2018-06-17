@@ -9,10 +9,10 @@ object Ejemplo03Variables {
     /*
       Pueden definir el tipo tras los :
      */
-    var myVar : String = "Foo"
+    var bar : String = "Foo"
     // No pueden cambiar de tipo
     //myVar=2;
-    myVar="Otro Valor"
+    bar="Otro Valor"
 
     //Pueden inferir el tipo
     var myVar2 = "Foo"
