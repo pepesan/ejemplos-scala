@@ -74,12 +74,12 @@ object Ejemplo09Clases {
     class Perro (nombre: String="",raza:String ="",edad:Int=0) extends Animal (nombre,edad) {
       override def toString = s"$name de la raza $raza tiene $edad años"
     }
-    var persona = new Animal("Bicho")
-    println(persona)
-    var empleado = new Perro("Koty")
-    println(empleado)
-    empleado=new Perro("Nyska","Podenco",2)
-    println(empleado)
+    var animal = new Animal("Bicho")
+    println(animal)
+    var perro = new Perro("Koty")
+    println(perro)
+    perro=new Perro("Nyska","Podenco",2)
+    println(perro)
 
   }
 }

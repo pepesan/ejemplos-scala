@@ -66,7 +66,8 @@ object Ejemplo06Colleciones {
     println(mapa.get('I'))
     mapa.keys.foreach{ i =>
       print( "Clave = " + i )
-      println(" Valor = " + mapa(i) )}
+      println(" Valor = " + mapa(i) )
+    }
 
 
 
