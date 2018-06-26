@@ -2,6 +2,9 @@ package com.cursosdedesarrollo.ejemplos
 
 object Ejemplo06Colleciones {
   def main(args: Array[String]) {
+    //var cosas: List[Any] = List("manzanas", 2, "peras")
+    var cosas = List("manzanas", 2, "peras")
+
     // Listado de cadenas
     var frutas: List[String] = List("manzanas", "naranjas", "peras")
     println( "Cabecera : " + frutas.head )
@@ -40,11 +43,15 @@ object Ejemplo06Colleciones {
     println(frutas2)
 
     var x = List(5, 1, 4, 3, 2)
-    x = x.filter(_ > 2)
+    println("Filtro")
+    //x = x.filter( a => a >= 4)
+    x = x.filter(_ >= 4)
     println(x)
 
     var listado = List(1,2,3)
-    var listadoMapeado = listado.map(a => a * 2)
+    //var listadoMapeado = listado.map(a => a * 2)
+    var listadoMapeado = listado.map(_ * 2)
+    println("Mapeo")
     println(listadoMapeado)
 
 

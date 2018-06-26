@@ -2,12 +2,13 @@ package com.cursosdedesarrollo.ejemplos
 
 object Ejemplo09Clases {
   def main(args: Array[String]) {
+
     class Coche(var marca: String ="", var modelo: String=""){
       override def toString: String =
-        s"(Marca: $marca, Modelo: $modelo)"
+        s"Coche(Marca: $marca, Modelo: $modelo)"
     }
 
-    var c=new Coche()
+    var c=new Coche("Toyota","")
     println(c)
     c.marca="Toyota"
     c.modelo="Auris"
@@ -44,6 +45,7 @@ object Ejemplo09Clases {
     }
 
 
+
     class Rectangulo(name:String) extends Figura {
       var nombre = name
       var coordSupIzq = (0,0)
@@ -61,6 +63,15 @@ object Ejemplo09Clases {
 
 
 
+    /*class Animal (var name: String="", var edad: Int=0) {
+
+      // Constructor auxiliar
+      def this (nombre: String) {
+        this(nombre, 0)
+      }
+      override def toString = s"$name tiene $edad años"
+    }
+    */
     class Animal (var name: String="", var edad: Int=0) {
 
       // Constructor auxiliar
@@ -71,7 +82,8 @@ object Ejemplo09Clases {
     }
 
     // calls the Animal one-arg constructor
-    class Perro (nombre: String="",raza:String ="",edad:Int=0) extends Animal (nombre,edad) {
+    class Perro (nombre: String="",raza:String ="",edad:Int=0)
+      extends Animal (nombre,edad) {
       override def toString = s"$name de la raza $raza tiene $edad años"
     }
     var animal = new Animal("Bicho")
