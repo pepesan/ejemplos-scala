@@ -60,7 +60,6 @@ object Ejemplo10Traits {
     }
     var ht=new HyperTrato()
     println(ht)
-    ht.
 
   }
 }
