@@ -17,12 +17,17 @@ object Ejemplo05Arrays {
 
     // Print all the array elements
     for ( x <- z3 ) {
+      //x=2  // x es inmutable
       println( x )
     }
 
     //Arrays multidimensionales
     val matrix = Array.ofDim[Int](2,2)
 
+    matrix(0)(0)=2
+    matrix(0)(1)=4
+    matrix(1)(0)=7
+    matrix(1)(1)=9
     println(matrix(0)(0))
     println(matrix(0)(1))
     println(matrix(1)(0))

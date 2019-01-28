@@ -2,11 +2,16 @@ package com.cursosdedesarrollo.ejemplos
 
 object Ejemplo02Resumen {
   def main(args: Array[String]) {
+
+    val cadena = "Foo"
+
     val x = 1 + 1
-    //x = 3 los valores no cambian su valor
+    //x = 3 //los valores no cambian su valor
     var y = 1 + 1
     y = 3
     println(y * y) // 9
+
+    //y="Cadena" // No puedo cambiar el tipo
 
     var z: Int = 1 + 1
 
