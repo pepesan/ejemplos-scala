@@ -89,9 +89,9 @@ object Ejemplo06Colleciones {
     println(mapa.isEmpty)
     println(mapa.get('I'))
     mapa.keys.foreach(println(_))
-    mapa.keys.foreach{ _ =>
+    mapa.keys.foreach{ i =>
       print( "Clave = " + _ )
-      println(" Valor = " + mapa(_) )
+      println(" Valor = " + mapa(i) )
     }
 
     mapa.foreach(println(_))

@@ -41,7 +41,13 @@ object Ejemplo08Funciones {
     println(x)
     println(inc)
 
-
-
+    def devuelveTupla( a:Int =5, b:Int =7 ):Any = {
+      return (a,b)
+    }
+    val (a,b)=devuelveTupla(4,5)
+    println(a)
+    println(b)
+    val t=devuelveTupla(4,5)
+    println(t(0))
   }
 }
