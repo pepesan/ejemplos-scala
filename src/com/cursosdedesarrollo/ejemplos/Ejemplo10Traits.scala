@@ -7,6 +7,8 @@ object Ejemplo10Traits {
     trait Parlanchin {
 
       def habla() = println("Hablo por los codos")
+
+      def parlotea():Unit
     }
 
     class Animal{
@@ -15,6 +17,10 @@ object Ejemplo10Traits {
     }
     class Rana extends Animal with Parlanchin {
       override def toString = "Rana"
+
+      override def parlotea(): Unit = {
+
+      }
     }
 
 
