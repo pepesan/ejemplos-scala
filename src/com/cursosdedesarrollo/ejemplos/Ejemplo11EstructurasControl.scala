@@ -56,8 +56,23 @@ object Ejemplo11EstructurasControl {
 
 
     var factor = 3
-    val multiplier = (i:Int) => i * factor
+    //val multiplier = (i:Int) => i * factor
+    val multiplier = (i:Int) => {
+      i * factor
+    }
     var c=multiplier(2)
     println(c)
+
+
+    // for loop execution with a range
+    for( a <- 5 to 20){
+      println( "a: " + a )
+    }
+    /*
+    while ({
+      true
+    }){
+    }
+    */
   }
 }
