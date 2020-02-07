@@ -33,6 +33,8 @@ object Ejemplo05Arrays {
     println(matrix(1)(0))
     println(matrix(1)(1))
 
+    var matrix3 = Array.ofDim[Int](2,3,4)
+
 
     //concatenación de Arrays
     var myList1 = Array(1.9, 2.9, 3.4, 3.5)
@@ -62,7 +64,6 @@ object Ejemplo05Arrays {
 
     res= myList1.isEmpty
     println(res)
-
 
   }
 }

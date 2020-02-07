@@ -12,6 +12,7 @@ object Ejemplo06Colleciones {
     println( "Cabecera : " + frutas.head )
     println( "Cola : " + frutas.tail )
     println( "Comprueba si está vacío : " + frutas.isEmpty)
+    println( "Comprueba si no está vacío : " + frutas.nonEmpty)
     println(frutas(1))
     println(frutas)
     frutas = "uvas" :: frutas
@@ -22,7 +23,9 @@ object Ejemplo06Colleciones {
     frutas.foreach({
       println
     })
-
+    // for (String fruta in frutas){
+    // System.out.println(fruta);
+    //}
     for (fruta <- frutas){
       println(fruta)
     }
@@ -59,13 +62,33 @@ object Ejemplo06Colleciones {
 
     var x = List(5, 1, 4, 3, 2)
     println("Filtro")
+    /*
+      temp = []
+      for ( a <- x){
+        if(a>=4){
+        temp.append(x)
+        }
+      }
+      x = temp
+     */
     //x = x.filter( a => a >= 4)
     //x = x.filter( _ => _ >= 4) // esto no es valido, pero casi
     x = x.filter(_ >= 4)
     println(x)
 
     var listado = List(1,2,3)
+    /*
+      temp = []
+      for ( a <- x){
+        temp.append(a * 2)
+      }
+      return temp
+     */
     //var listadoMapeado = listado.map(a => a * 2)
+    /*
+    var listadoMapeado = listado.map((a) =>{
+      return a * 2
+     });*/
     //var listadoMapeado = listado.map(_ => _ * 2)
     var listadoMapeado = listado.map(_ * 2)
     println("Mapeo")
@@ -87,7 +110,12 @@ object Ejemplo06Colleciones {
     println(mapa.keys)
     println(mapa.values)
     println(mapa.isEmpty)
+    println(mapa.nonEmpty)
     println(mapa.get('I'))
+    println(mapa('I'))
+    // añadir un campo
+    mapa += ('A' -> 2)
+    println("Mapa(A):" + mapa('A'))
     mapa.keys.foreach(println(_))
     mapa.keys.foreach{ i =>
       print( "Clave = " + _ )

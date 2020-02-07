@@ -1,5 +1,7 @@
 package com.cursosdedesarrollo.ejemplos
 
+import scala.annotation.switch
+
 object Ejemplo11EstructurasControl {
   def main(args: Array[String]) {
     val x = 10
@@ -74,5 +76,12 @@ object Ejemplo11EstructurasControl {
     }){
     }
     */
+
+    val i = 1
+    val x2 = (i: @switch) match {
+      case 1  => "One"
+      case 2  => "Two"
+      case _  => "Other"
+    }
   }
 }

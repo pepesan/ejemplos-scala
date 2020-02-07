@@ -4,7 +4,7 @@ object Ejemplo04Cadenas {
   def main(args: Array[String]) {
     var cadena = "Hola Mundo"
     //longitud
-    print(cadena.length)
+    println(cadena.length)
     //minúsculas
     print(cadena.toLowerCase)
     //mayúsculas
@@ -19,8 +19,11 @@ object Ejemplo04Cadenas {
     println("Hello," + " world" + "!")
 
 
+
     val name = "David"
+    val surname= "Vaquero"
     println(s"Hello, $name") //output: Hello, James
+
 
     val height = 1.9d
     println(f"$name%s is $height%2.2f meters tall") //James is 1.90 meters tall
