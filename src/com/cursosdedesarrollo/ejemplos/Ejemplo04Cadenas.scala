@@ -8,7 +8,7 @@ object Ejemplo04Cadenas {
     //minúsculas
     print(cadena.toLowerCase)
     //mayúsculas
-    print(cadena.toUpperCase())
+    print(cadena.toUpperCase)
     var string1 = "Hola "
     var string2 ="Mundo!"
     println(string1.concat(string2))
@@ -22,7 +22,8 @@ object Ejemplo04Cadenas {
 
     val name = "David"
     val surname= "Vaquero"
-    println(s"Hello, $name") //output: Hello, James
+    println(s"Hello, $name! Wellcome!") //output: Hello, David
+    // System.out.println("Hello, "+name+"! Wellcome!");
 
 
     val height = 1.9d
