@@ -57,7 +57,7 @@ object Datos {
     println(cadena)
     var contador=0
     cadena.foreach( _ => {
-      print(_)
+      print _
       contador+=1
     })
     println("")

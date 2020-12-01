@@ -6,7 +6,7 @@ object Ejemplo06Colleciones {
   def main(args: Array[String]) {
     //var cosas: List[Any] = List("manzanas", 2, "peras")
     var cosas = List("manzanas", 2, "peras")
-
+    println(cosas)
     // Listado de cadenas
     var frutas: List[String] = List("manzanas","Caquis", "naranjas", "peras")
     println( "Cabecera : " + frutas.head )
@@ -19,10 +19,23 @@ object Ejemplo06Colleciones {
     println(frutas)
     frutas = frutas ::: List("melones")
     println(frutas)
-
+    println("Frutas Item")
+    frutas.foreach((item) => {
+      println(item)
+      println(item.contains("v"))
+    })
+    println("Frutas _")
+    frutas.foreach({
+      println(_)
+      // No funciona -> println(_.toString)
+    })
+    println("Frutas sin _")
     frutas.foreach({
       println
     })
+    println("Frutas sin ()")
+    frutas.foreach {println}
+
     // for (String fruta in frutas){
     // System.out.println(fruta);
     //}
@@ -73,8 +86,8 @@ object Ejemplo06Colleciones {
      */
     //x = x.filter( a => a >= 4)
     //x = x.filter( _ => _ >= 4) // esto no es valido, pero casi
-    x = x.filter(_ >= 4)
-    println(x)
+    var xfiltrado = x.filter(_ >= 4)
+    println(xfiltrado)
 
     var listado = List(1,2,3)
     /*
@@ -112,14 +125,16 @@ object Ejemplo06Colleciones {
     println(mapa.isEmpty)
     println(mapa.nonEmpty)
     println(mapa.get('I'))
+    println(mapa.get('I').get)
     println(mapa('I'))
     // añadir un campo
     mapa += ('A' -> 2)
     println("Mapa(A):" + mapa('A'))
     mapa.keys.foreach(println(_))
     mapa.keys.foreach{ i =>
-      print( "Clave = " + _ )
-      println(" Valor = " + mapa(i) )
+      println( "" + _ )
+      println( "Clave = " + i )
+      println("Valor = " + mapa(i) )
     }
 
     mapa.foreach(println(_))

@@ -9,5 +9,12 @@ object Ejemplo07Tuplas {
     println(t._3)
     //Recorriendo una tupla
     t.productIterator.foreach{ i =>println("Value = " + i )}
+    t.productIterator.foreach {println}
+
+    var mapa = Map[String, Any]()
+    mapa  += ("Cliente X" -> ("calle", "tlf", ""))
+    val listadoMapas = List [Map[String, Any]](mapa)
+    listadoMapas.foreach(println)
+
   }
 }

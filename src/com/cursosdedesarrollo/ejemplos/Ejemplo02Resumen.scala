@@ -22,13 +22,18 @@ object Ejemplo02Resumen {
 
     val addOne = (x: Int) => x + 1
     /*
-    def addOne (x: Int) {
+    def addOne (x: Int): Int {
       return x + 1
     }
      */
     println(addOne(1)) // 2
 
     val add = (x: Int, y: Int) => x + y
+    /*
+    def add (x: Int, y: Int): Int {
+      return x + y
+    }
+     */
     println(add(1, 2)) // 3
 
     val getTheAnswer = () => 42
