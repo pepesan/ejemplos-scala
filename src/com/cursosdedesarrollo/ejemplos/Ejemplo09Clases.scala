@@ -42,13 +42,17 @@ object Ejemplo09Clases {
       private val bound = 100
 
       def prop=_prop
+      def bound_ =  bound
+      def getBound: Int = {
+        bound
+      }
 
-      def prop_ (newValue: Int): Unit = {
+      def setProp (newValue: Int): Unit = {
         if (newValue < bound) _prop = newValue else printWarning
       }
 
       def cambia={
-        prop_(23)
+        setProp(23)
       }
 
       private def printWarning = println("WARNING: Out of bounds")
@@ -57,11 +61,16 @@ object Ejemplo09Clases {
     }
 
     var privado= new Privados
-    privado.prop_(2)
+    privado.setProp(2)
     println(privado)
     println(privado.prop)
+    println(privado.getBound)
+    println(privado.bound_)
     //privado.prop=2 //No es posible porque es privado
-    privado.prop_(120)
+    privado.setProp(120)
+    privado.cambia
+    println(privado.prop)
+
 
     abstract class Figura {
       var nombre: String
@@ -76,7 +85,7 @@ object Ejemplo09Clases {
 
 
 
-    class Rectangulo(name:String) extends Figura {
+    class Rectangulo(name:String = "") extends Figura {
       var nombre = name
       var coordSupIzq = (0,0)
       var coordInfDer = (0,0)
@@ -102,7 +111,9 @@ object Ejemplo09Clases {
       override def toString = s"$name tiene $edad años"
     }
     */
-    class Animal (var name: String="", var edad: Int=0) {
+    class Animal (
+                   var name: String="",
+                   var edad: Int=0) {
 
       // Constructor auxiliar
 
@@ -120,7 +131,10 @@ object Ejemplo09Clases {
     }
 
     // calls the Animal one-arg constructor
-    class Perro (nombre: String="", edad:Int=0,var raza:String ="")
+    class Perro (
+                  nombre: String="",
+                  edad:Int=0,
+                  var raza:String ="")
       extends Animal (nombre,edad) {
 
       override def toString = s"$name de la raza $raza tiene $edad años"
@@ -131,15 +145,22 @@ object Ejemplo09Clases {
     println(perro)
     println(perro.raza)
     println(perro.edad)
-    perro=new Perro("Nyska",2,"Podenco")
+    perro=new Perro("Nyska",4,"Podenco Andaluz")
     println(perro)
     perro=new Perro
     perro=new Perro(edad = 2)
 
-    class Gato (nombre:String,edad:Int=0, var juguete:String="") extends Animal (nombre,edad){
+    class Gato (
+                 nombre:String,
+                 edad:Int=0,
+                 var juguete:String="")
+      extends Animal (nombre,edad){
 
     }
     var gato= new Gato("Gato")
+    println(gato)
+    gato.name="Minu"
+
 
   }
 }

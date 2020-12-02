@@ -19,13 +19,14 @@ object Ejemplo10Traits {
       override def toString = "Rana"
 
       override def parlotea(): Unit = {
-
+        println("Hablo por los codos o más")
       }
     }
 
 
     val ranita = new Rana
     ranita.habla()
+    ranita.parlotea()
 
     trait Cat extends Animal {
       override def sound = "Miau"
@@ -34,6 +35,11 @@ object Ejemplo10Traits {
     trait Dog extends Animal {
       override def sound = "Guau"
     }
+
+    trait TraitRaro extends Dog with Cat{
+      override def sound = "perro verde"
+    }
+
     case class Fox() extends Cat with Dog
 
     val myFox = Fox()
@@ -61,7 +67,7 @@ object Ejemplo10Traits {
       }
     }
 
-    class HyperTrato extends Trato1 with Trato3 with Trato2 {
+    class HyperTrato extends Trato1 with Trato2 with Trato3 {
       override def toString = "Hypertrato"
     }
     var ht=new HyperTrato()
